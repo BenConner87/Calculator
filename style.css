@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "results1 results1 results1 results1"
+                         "results2 results2 results2 results2"
+                         "seven eight nine divide"
+                         "four five six multiply"
+                         "one two three subtract"
+                         "zero clear enter add";
+    
+    border: 2px solid rgba(0, 0, 0, 0.755);
+    background-color: rgba(128, 128, 128, 0.55);
+    width: 60vw;
+    height: 60vh;
+    margin: 10% auto 10% auto;
+    text-align: center;
+    padding: 10px;
+    max-width: 300px;
+}
+
+.current-operand, .previous-operand {
+    grid-column: 1/-2;
+    justify-self: center;
+    align-self: center;
+    padding-top: 1.5em;
+    background-color: white;
+    width: 95%;
+    height: 95%;
+}
+
+.current-operand {
+    grid-area: results1;
+}
+
+.current-operand {
+    grid-area: results2;
+}
+
+.container button {
+    border: 1px solid black;
+    justify-self: center;
+    align-self: center;
+    width: 90%;
+    height: 90%;
+    padding-top: 1em;
+    background-color: gray;
+    color: white;
+    font-size: 1.5em;
+}
+
+#divide, #multiply, #subtract, #add {
+    background-color: rgba(0, 94, 255, 0.708);
+}
+
+#enter {
+    background-color: rgba(0, 128, 0, 0.735);
+}
+
+#clear {
+    background-color: rgba(255, 0, 0, 0.721);
+}
+
+button:hover, #clear:hover, #enter:hover, #divide:hover, 
+#multiply:hover, #subtract:hover, #add:hover {
+    background-color: aqua;
+}
